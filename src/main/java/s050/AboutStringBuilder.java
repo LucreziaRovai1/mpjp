@@ -6,17 +6,17 @@ public class AboutStringBuilder {
         StringBuilder sb2 = new StringBuilder(20);
         StringBuilder sb3 = new StringBuilder("hello");
         
-        System.out.println("capacity 1: " + sb.capacity());
+        System.out.println("capacity 1: " + sb.capacity());//capacity=quanto spazio ha java per lavorarci sopra
         System.out.println("capacity 2: " + sb2.capacity());
         System.out.println("capacity 3: " + sb3.capacity());
         
-        System.out.println("appending: " + sb3.append(' ').append("world"));
+        System.out.println("appending: " + sb3.append(' ').append("world"));//aggiungo caratteri allo stringbuilder corrente, non creo una nuova stringa
         
         System.out.println("char at position 1 in sb3 is '" + sb3.charAt(1) + "'");
         
-        System.out.println("deleting: " + sb3.delete(5, 10).deleteCharAt(2));
+        System.out.println("deleting: " + sb3.delete(5, 10).deleteCharAt(2));//ritorna un reference allo stringbuilder corrente, in tutti questi casi
         
-        System.out.println("index of \"elo\": " + sb3.indexOf("elo"));
+        System.out.println("index of \"elo\": " + sb3.indexOf("elo"));//sì, parte dall'indice 1
         
         System.out.println("inserting \"lo c\" at 3: " + sb3.insert(3, "lo c"));
         
@@ -27,9 +27,9 @@ public class AboutStringBuilder {
         System.out.println("reversing: " + sb3.reverse());
         
         sb3.setCharAt(5, 'a');
-        System.out.println("setCharAt: " + sb3);
+        System.out.println("setCharAt: " + sb3);//per modificare un carattere nella stringa
         
         sb3.setLength(3);
-        System.out.println("setLength: " + sb3);
+        System.out.println("setLength: " + sb3);//tipicamente per accorciare la stringa, quello che non uso viene buttato via
     }
 }
