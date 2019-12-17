@@ -25,7 +25,7 @@ class SimpleTest {
 
 	@Test
 	public void negateMaxInt() {
-		int value = Integer.MAX_VALUE;// è il massimo numero rappresentabile
+		int value = Integer.MAX_VALUE; // è il massimo numero rappresentabile
 
 		int result = simple.negate(value);
 
