@@ -16,6 +16,14 @@ class S59Test {
     }
 
     @Test
+    void sumPositive1() {
+        long actual = S59.sum(2_000_000_000, 2_000_000_001);
+
+        assertThat(actual, is(4_000_000_001L));
+    }
+    
+    
+    @Test
     void sumNegPos() {
         long actual = S59.sum(-3, 3);
 
@@ -80,11 +88,15 @@ class S59Test {
 
     @Test
     void fibonacci() {
-        fail("Not yet implemented");
+    	long actual = S59.fibonacci(8) ;
+    	 assertThat(actual, is(21L));	
     }
 
     @Test
     void multiplicationTable() {
-        fail("Not yet implemented");
+    	int[][] actual = S59.multiplicationTable(6);
+    	assertThat(actual, is(21L));
+    	
+    	
     }
 }

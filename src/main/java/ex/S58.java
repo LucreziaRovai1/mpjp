@@ -45,7 +45,7 @@ public class S58 {
 
 		switch (value) {
 		case 0:
-			return "zero";
+			return "zero";// c'è il return, quindi non è necessario il break
 
 		case 1:
 			return "one";
@@ -89,19 +89,18 @@ public class S58 {
 
 		if (percentile > 90) {
 			return 'A';
-		} else if (percentile > 80 && percentile < 90) {
+		} else if (percentile > 80) { // è inutile inserire ogni volta il <del numero, perché quel caso è già compreso
+										// in quello precedente. A partire dal >90.
 			return 'B';
-		} else if (percentile > 70 && percentile < 80) {
+		} else if (percentile > 70) {
 			return 'C';
-		} else if (percentile > 60 && percentile < 70) {
+		} else if (percentile > 60) {
 			return 'D';
-		} else if (percentile > 50 && percentile < 60) {
+		} else if (percentile > 50) {
 			return 'E';
-		} else if (percentile <= 50) {
+		} else {
 			return 'F';
 		}
-		return 0;
-
 	}
 
 	/**
@@ -114,12 +113,13 @@ public class S58 {
 
 		if (year % 400 == 0) {
 			return true;
-		} else if ((year % 4 == 0) && !(year % 100 == 0)) {
+		} else if ((year % 4 == 0) && !(year % 100 == 0)) { // divisibili per 4 ma non per 100
 			return true;
 		} else {
 			return false;
 		}
 	}
+}
 
 	/**
 	 * Sort the input parameters
@@ -129,11 +129,48 @@ public class S58 {
 	 * @param c
 	 * @return a sorted array
 	 */
-	public static int[] sort(int a, int b, int c) {
-		int[] result = new int[3];
-
-		
-
-		return result;
-	}
-}
+//	public static int[] sort(int a, int b, int c) { // E' SBAGLIATO AGGIUSTALO
+//		int[] result = new int[3];
+//		
+//		
+//		if (a < b) {
+//	             if (c < a) {
+//	            	 result [0]= c;
+//	            	 result [1]= a;
+//	            	 result [2]= b;
+//			
+//	             }else if (c>b) {
+//			           result [0]= a;
+//	                   result [1]= b;
+//	                   result [2]= c;
+//		} 
+//		else {
+//			result [0]= a;
+//            result [1]= c;
+//            result [2]= b;
+//		}
+//		}
+//	   
+//	             else if (a > b) {	 
+//	             if (c < b)
+//	             result [0]= c;
+//            	 result [1]= b;
+//            	 result [2]= a;
+//            	 
+//	             }else if (c < a) {
+//	            	 result [0]= b;
+//	            	 result [1]= c;
+//	            	 result [2]= a;
+//	             }
+//	             else {
+//	            	 
+//	             }
+//	            	 
+//	             }
+//		return result
+//}
+//}
+//	}
+//	}
+//	}
+//	}
