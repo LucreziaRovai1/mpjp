@@ -5,8 +5,8 @@ public class Poodle extends Dog {
 	private int curlDensity;
 	
 	public Poodle() {
-		super();
-		this.curlDensity = DEFAULT_DENSITY;
+		super();//si poteva anche omettere, perché se non do dettagli al costruttore, lui di default deve metterci qualcosa riguardante Dog.
+		this.curlDensity = DEFAULT_DENSITY;//il super dev'essere sempre prima del this
 	}
 
 	public Poodle(String name) {

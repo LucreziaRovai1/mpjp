@@ -7,11 +7,11 @@ public class Dog {
 	private String name;
 	private int weight;
 
-	public Dog() {
+	public Dog() {//chiamo il costruttore alla riga 22, mettendogli un nome di default
 		this(DEFAULT_NAME, DEFAULT_WEIGHT);
 	}
 
-	public Dog(String name) {
+	public Dog(String name) {//il nome è quello che mi dice l'utente, il peso è di default
 		this(name, DEFAULT_WEIGHT);
 	}
 
@@ -24,12 +24,12 @@ public class Dog {
 		this.weight = weight;
 	}
 
-	public String getName() {
+	public String getName() {//se voglio leggere una proprietà chiamo un "getter": quello che mi ritorna un valore
 		return name;
 	}
 
     @Override
     public String toString() {
-        return "S71Dog [name=" + name + ", weight=" + weight + "]";
+        return "S75Dog [name=" + name + ", weight=" + weight + "]";
     }
 }
