@@ -8,7 +8,7 @@ class DogTest {
 
 	@Test
 	void barkPlain() {  //plain perché è un test semplice. la @ è un'annotazione
-		Dog dog = new Dog();
+		//Dog dog = new Dog(); 
 		fail("Not yet implemented"); //la barra rossa vuol dire che il test è fallito
 	}
 
