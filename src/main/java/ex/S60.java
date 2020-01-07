@@ -71,9 +71,16 @@ public class S60 {
 	 * @return a new array holding the same elements of input, in reversed order
 	 */
 	public static int[] reverse(int[] data) {
-		int[] result = new int[0];
+		int[] result = new int[data.length];
+		int j = 0;
 
-		// TODO
+		for (int i = data.length - 1; i >= 0; i--) { // se la lunghezza dell'array è 3 parto da 2, ecco perché -1, fino
+														// a che non arrivo alla posizione 0
+			result[j] = data[i];
+			j++; // perché dovendo ordinare il secondo array incrementando la posizione, gli devo
+					// dire di andare avanti
+
+		}
 
 		return result;
 	}
@@ -85,8 +92,14 @@ public class S60 {
 	 * @return the average
 	 */
 	public static double average(int[] data) {
-		// TODO
-		return 0;
+
+		double sum = 0;
+
+		for (int i = 0; i < data.length; i++) {
+			sum += data[i];
+		}
+
+		return sum / data.length;
 	}
 
 	/**
@@ -95,8 +108,17 @@ public class S60 {
 	 * @param data
 	 * @return the largest value
 	 */
-	public static int max(int[] data) {
-		// TODO
-		return 0;
+	public static int max(int[] data) { // se l'array è vuoto il mio result sarà minvalue, se c'è un null: eccezione
+
+		int result = Integer.MIN_VALUE; // sicuramente il mio risultato non sarà più piccolo di così
+
+		for (int i = 0; i < data.length; i++) {
+			if (data[i] > result) {
+				result = data[i];
+			}
+
+		}
+
+		return result;
 	}
 }
