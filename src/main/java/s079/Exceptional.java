@@ -13,7 +13,7 @@ public class Exceptional {
 
     public void g() throws Exception {
         // ...
-        if (somethingUnexpected()) {
+        if (somethingUnexpected()) {//se questo mi ritorna true allora tira l'eccezione
             throw new Exception();
         }
     }

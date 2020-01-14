@@ -1,7 +1,7 @@
 -- simple pattern matching
 select last_name
 from employees
-where last_name like '_ul%';
+where last_name like '_ul%'; 
 
 -- interval check
 select *
