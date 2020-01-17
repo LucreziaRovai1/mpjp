@@ -6,7 +6,7 @@ drop procedure if exists get_coder_salary;
 
 delimiter //
 
-create procedure get_coder_salary(
+create procedure get_coder_salary(get_coder_salary
 	in p_coder_id integer,
     out p_salary decimal(8, 2)
 ) begin

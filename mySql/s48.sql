@@ -9,3 +9,13 @@ values (12);
 -- insert relying on column definition on table
 insert into regions
 values (13, null);
+
+
+
+use me;
+
+insert into regions (region_id, region_name)
+values (8, 'Madagascar');
+select * from regions;
+
+

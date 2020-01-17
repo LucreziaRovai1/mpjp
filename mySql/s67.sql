@@ -14,7 +14,7 @@ begin
 	into v_total
 	from coders;
     
-	if v_total > 0 then
+	if v_total > 30.000 then
 		select v_total as "total salaries";
 	else
 		select "no salary information available for coders!" as warning;

@@ -20,9 +20,6 @@ select first_name, last_name, department_name
 from departments d join employees
 on(d.manager_id= EMPLOYEE_ID);
 
-select first_name, last_name, department_name
-from departments d left outer join employees
-on(d.manager_id= EMPLOYEE_ID);
 
 select department_name
 from departments 
@@ -33,9 +30,14 @@ select e.first_name, e.last_name as employee, m.last_name, m.first_name as manag
 from employees e left outer join employees m
 on (e.manager_id=m.employee_id); 
 
-select salary, salary + (salary /100 * 8.5) as 'new salary', abs(salary/100 * 8.5 - salary) as 'difference' 
-from employees
+select last_name, salary, truncate(salary + salary /100 * 8.5,2) as 'new salary', truncate(salary /100 * 8.5,2) as 'difference' 
+from employees;
 
+select datediff(curdate(), hire_date) as 'difference'
+from employees;
+
+select last_name, ifnull(commission_pct, 'no value') as 'commission percentage'
+from employees;
 
 
 
